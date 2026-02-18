@@ -1,0 +1,31 @@
+line-length = 120     
+indent-width = 4          
+fix = true               
+target-version = "py314"   
+
+[lint]
+select = [
+  "E","W","F","UP","B","C4","I","SIM",
+  "D","N","FA","ICN","RET","ISC",
+  "TID","TC","PTH","TD","NPY","PT","T20","S","ANN","TCH"
+]
+ignore = ["E501","W191","E111","E114","E117","B008","C901","D100","D104"]
+
+[lint.per-file-ignores]
+"__init__.py"  = ["F401"]
+"tests/**/*.py" = ["S101","D101","D102","D103"]
+"migrations/*" = ["E501"]
+
+[lint.isort]
+section-order     = ["future","standard-library","third-party","first-party","local-folder"]
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.pyupgrade]
+keep-runtime-typing = true
+
+[format]
+quote-style  = "double"
+indent-style = "space"
+line-ending  = "lf"
