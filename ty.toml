@@ -1,0 +1,33 @@
+# Target Python version
+[environment]
+python-version = "3.13"
+
+# Source files to check
+[src]
+include = ["src/**/*.py"]
+exclude = ["src/generated/**", "build/**", "dist/**", "migrations/**"]
+
+# Global rule settings
+[rules]
+invalid-assignment = "error"
+invalid-argument-type = "error"
+invalid-return-type = "error"
+call-non-callable = "error"
+too-many-positional-arguments = "error"
+positional-only-parameter-as-kwarg = "error"
+
+deprecated = "warn"
+redundant-cast = "warn"
+possibly-unresolved-reference = "warn"
+possibly-missing-import = "warn"
+possibly-missing-attribute = "warn"
+ineffective-final = "warn"
+
+# Override for test files (less strict)
+[[overrides]]
+include = ["tests/**"]
+
+[overrides.rules]
+possibly-unresolved-reference = "warn"
+possibly-missing-import = "warn"
+possibly-missing-attribute = "warn"
