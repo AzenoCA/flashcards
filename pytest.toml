@@ -1,0 +1,16 @@
+minversion = "9.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = [
+    "-ra",
+    "-strict-config",
+    "-strict-markers",
+    "-import-mode=importlib",
+    "-duration=10",
+    "-timeout=20",
+]
+xfail_strict = true
+markers = [
+    "slow: long-running tests excluded by default"
+]
+filterwarnings = ["error"]
