@@ -15,3 +15,9 @@ wheels/
 *.log
 
 .ruff_cache
+
+# Test coverage
+htmlcov/
+.tox/
+coverage.xml
+.coverage
