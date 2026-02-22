@@ -11,4 +11,6 @@ dependencies = [
 [dependency-groups]
 dev = [
     "ruff>=0.15.1",
+    "tox==4.44.0",
+    "tox-uv==1.29.0",
 ]
