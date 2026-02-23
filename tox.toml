@@ -2,7 +2,7 @@ requires = [
     "tox==4.44.0",
     "tox-uv==1.29.0"
 ]
-env_list = ["py312", "py313", "py314", "coverage"]
+env_list = ["py313", "py314", "coverage"]
 
 [env_run_base]
 package = "editable"
@@ -15,8 +15,6 @@ commands = [
 [env_run_base.setenv]
 PYTHONPATH = "src"
 
-[env.py312]
-basepython = ["python3.12"]
 
 [env.py313]
 basepython = ["python3.13"]
