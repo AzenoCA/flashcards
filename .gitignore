@@ -15,3 +15,7 @@ wheels/
 *.log
 
 .ruff_cache
+
+.coverage
+coverage.xml
+htmlcov

@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 from typing import TYPE_CHECKING
 
-from src.utils.log_around import log_around
+from flashcards.utils.log_around import log_around
 
 if TYPE_CHECKING:
     import pytest

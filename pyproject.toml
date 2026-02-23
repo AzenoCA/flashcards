@@ -16,5 +16,22 @@ dev = [
     "pytest-randomly==4.0.1",
     "pytest-xdist==3.8.0",
     "ruff==0.15.0",
-    "timeout==0.1.2",
+    "pytest-timeout==2.4.0",
 ]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.coverage.run]
+source = ["src/flashcards"]
+branch = true
+parallel = true
+relative_files = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 100
