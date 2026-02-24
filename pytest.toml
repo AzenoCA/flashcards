@@ -1,0 +1,23 @@
+[pytest]
+minversion = "9.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = [
+    "-ra",
+    "--strict-config",
+    "--strict-markers",
+    "--import-mode=importlib",
+    "--durations=10",
+    "--cov=flashcards",
+    "--cov-branch",
+    "--cov-report=term-missing:skip-covered",
+    "--cov-report=xml",
+    "--no-cov-on-fail",
+    "--cov-fail-under=100",
+    "--timeout=20"
+]
+xfail_strict = true
+markers = [
+    "slow: long-running tests excluded by default"
+]
+filterwarnings = ["error"]
