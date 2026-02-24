@@ -1,6 +1,6 @@
 import logging
 
-from src.utils.logging_config import configure_logging
+from flashcards.utils.logging_config import configure_logging
 
 logger = logging.getLogger(__name__)
 
