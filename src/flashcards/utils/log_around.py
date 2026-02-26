@@ -9,7 +9,7 @@ if TYPE_CHECKING:
     from collections.abc import Callable
 
 
-def log_around[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
+def logAround[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
     """Decorator that provides structured debug-level logging around a callable.
 
     This decorator logs:
