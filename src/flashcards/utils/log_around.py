@@ -5,6 +5,7 @@ import logging
 from functools import wraps
 from typing import TYPE_CHECKING
 
+
 if TYPE_CHECKING:
     from collections.abc import Callable
 
@@ -68,7 +69,7 @@ def logAround[**P, R](fn: Callable[P, R]) -> Callable[P, R]:
     func_logger = logging.getLogger(fn.__module__)
 
     @wraps(wrapped=fn)
-    def wrapper(*args: P.args, **kwargs: P.kwargs) -> R:
+    def wrapper(*args: P.args, **kwargs: P.kwargs) -> list:
         bound = signature.bind(*args, **kwargs)
         bound.apply_defaults()
         params = {name: repr(value) for name, value in bound.arguments.items()}
