@@ -15,6 +15,8 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "tox==4.44.0",
+    "tox-uv==1.29.0",
     "ruff==0.15.1",
     "ty==0.0.18",
     "pytest==9.0.2",
@@ -39,5 +41,3 @@ relative_files = true
 show_missing = true
 skip_covered = true
 fail_under = 100
-
-
