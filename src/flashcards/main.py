@@ -5,7 +5,7 @@ from flashcards.utils.logging_config import configure_logging
 logger = logging.getLogger(__name__)
 
 
-def main() -> None:
+def main() -> None:  # pragma: no cover
     """Entry point for the flashcards application."""
     configure_logging()
     logger.info("Application started")

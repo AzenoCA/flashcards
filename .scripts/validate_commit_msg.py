@@ -36,7 +36,6 @@ def _read_subject_line(commit_msg_file: Path) -> str:
 
 def main() -> int:
     """Validate git commit subject against Conventional Commits."""
-    print(sys.argv)
     if len(sys.argv) != 2:
         _write_stderr("Expected a commit message file path as the only argument.")
         return 2
