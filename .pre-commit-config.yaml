@@ -33,6 +33,6 @@ repos:
 
       - id: conventional-commit-message
         name: conventional commit message
-        entry: python3 .scripts/validate_commit_msg.py
+        entry: uv run python .scripts/validate_commit_msg.py
         language: system
         stages: [commit-msg]
