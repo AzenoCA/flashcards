@@ -1,0 +1,38 @@
+minimum_pre_commit_version: "4.5.1"
+
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check --no-fix src tests
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+
+      - id: ruff-format
+        name: ruff format --check
+        entry: uv run ruff format --check src tests
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+
+      - id: ty-check
+        name: ty check
+        entry: uv run ty check src
+        language: system
+        pass_filenames: false
+        stages: [pre-commit]
+
+      - id: pytest-pre-push
+        name: pytest (pre-push)
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: conventional-commit-message
+        name: conventional commit message
+        entry: uv run python .scripts/validate_commit_msg.py
+        language: system
+        stages: [commit-msg]
