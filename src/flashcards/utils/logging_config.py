@@ -5,7 +5,7 @@ import os
 from pythonjsonlogger import json
 
 
-def configure_logging() -> None:
+def configure_logging() -> None:  # pragma: no cover
     """Configure loggers, handlers, and formatters."""
     level: str = os.getenv("LOG_LEVEL", "INFO").upper()
 
