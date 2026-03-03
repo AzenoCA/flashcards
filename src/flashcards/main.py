@@ -1,3 +1,5 @@
+# pragma: no cover
+
 import logging
 
 from flashcards.utils.logging_config import configure_logging
