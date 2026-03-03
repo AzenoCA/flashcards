@@ -37,6 +37,7 @@ source = ["src/flashcards"]
 branch = true
 parallel = true
 relative_files = true
+omit = ['src/flashcards/main.py', 'src/flashcards/utils/logging_config.py']
 
 [tool.coverage.report]
 show_missing = true
