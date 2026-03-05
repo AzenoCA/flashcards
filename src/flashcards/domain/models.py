@@ -1,8 +1,11 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from enum import StrEnum
 from typing import TYPE_CHECKING
+from uuid import uuid4
+
+from flashcards.services.utc_now import utc_now
 
 if TYPE_CHECKING:
     from datetime import datetime
@@ -21,11 +24,11 @@ class ReviewResult(StrEnum):
 class Flashcard:
     """Immutable flashacrd entity."""
 
-    card_id: UUID
     front: str
     back: str
-    created_at: datetime
-    updated_at: datetime
+    created_at: datetime = field(default_factory=utc_now)
+    updated_at: datetime = field(default_factory=utc_now)
+    card_id: UUID = field(default_factory=uuid4)
     review_count: int = 0
     interval_days: int = 0
     last_result: ReviewResult | None = None
