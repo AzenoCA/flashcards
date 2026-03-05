@@ -2,7 +2,6 @@ import re
 import sys
 from pathlib import Path
 
-
 ALLOWED_TYPES = (
     "feat",
     "fix",
