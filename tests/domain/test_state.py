@@ -7,6 +7,7 @@ from uuid import UUID
 import pytest
 
 import flashcards.domain.state as state_module
+from flashcards.domain.errors import InvalidFlashcardError
 from flashcards.domain.models import Flashcards, RevievResult
 from flashcards.domain.state import add_flashcard, record_review
 
@@ -28,7 +29,7 @@ def test_add_flashcard_returns_with_normalized_fields() -> None:
 )
 def test_add_flashcard_validates_length(front: str, back: str) -> None:
     with pytest.raises(
-        ValueError,
+        InvalidFlashcardError,
         match="must have between 5 and 40 characters.",
     ):
         add_flashcard(front=front, back=back)
