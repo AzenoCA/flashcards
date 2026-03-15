@@ -35,7 +35,7 @@ def base_flashcard(card_id: UUID, fixed_now: datetime) -> Flashcards:
     return Flashcards(
         card_id=card_id,
         front="What is python?",
-        back="A programming language",
+        back="A programming language.",
         created_at=fixed_now,
         updated_at=fixed_now,
         review_count=0,

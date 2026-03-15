@@ -54,6 +54,6 @@ def test_record_review_preserves_unmodified_fields(
     card = record_review(base_flashcard, interval_days=3, last_result=RevievResult.HARD)
 
     assert card.front == "What is python?"
-    assert card.back == "A programming language"
+    assert card.back == "A programming language."
     assert card.card_id == card_id
     assert card.created_at == fixed_now

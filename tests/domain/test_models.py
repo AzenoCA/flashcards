@@ -1,16 +1,15 @@
+from __future__ import annotations
+
 from dataclasses import FrozenInstanceError
 from datetime import UTC, datetime
-from uuid import UUID
+from typing import TYPE_CHECKING
 
 import pytest
 
 from flashcards.domain import Flashcards, RevievResult
 
-
-@pytest.fixture
-def card_id() -> UUID:
-    """Return a stable UUID used by domain model."""
-    return UUID("11111111-1111-1111-1111-111111111111")
+if TYPE_CHECKING:
+    from uuid import UUID
 
 
 @pytest.mark.parametrize(
